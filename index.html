@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Academic Atlas — Professor Adrian Rowan</title>
+    <meta name="description" content="An Intellectual Map of Research, Teaching, Ideas & Academic Life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <div id="atlas-loader">
+        <div class="loader-terminal">MAPPING KNOWLEDGE</div>
+        <div style="font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: 0.1em; margin-top: 1rem;">THE ACADEMIC ATLAS</div>
+    </div>
+
+    <header class="atlas-header">
+        <div class="atlas-container nav-wrapper">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-badge">AR</span>
+                <span>THE ACADEMIC ATLAS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#scholar" class="nav-link">SCHOLAR</a></li>
+                <li><a href="#research" class="nav-link">RESEARCH</a></li>
+                <li><a href="#teaching" class="nav-link">TEACHING</a></li>
+                <li><a href="#publications" class="nav-link">PUBLICATIONS</a></li>
+                <li><a href="#journey" class="nav-link">JOURNEY</a></li>
+                <li><a href="#notes" class="nav-link">FIELD NOTES</a></li>
+                <li><a href="#contact" class="nav-link">CONVERSATION</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-atlas-icon" onclick="SearchEngine.open()" title="Global Command Search (Ctrl+K)"><i class="bi bi-search"></i></button>
+                <button class="btn-atlas-icon" id="lang-toggle-btn" onclick="LanguageEngine.setLanguage(LanguageEngine.current === 'en' ? 'bn' : 'en')" title="Translate UI">BN</button>
+                <a href="login.html" class="btn-atlas-icon" title="Academic Command Center Portal"><i class="bi bi-shield-lock"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="atlas-container hero-grid">
+            <div>
+                <div class="hero-eyebrow" id="hero-eyebrow-target">SAMPLE CONTENT — FICTIONAL DEMO PROFILE</div>
+                <h1 class="hero-name" id="hero-name-target">PROFESSOR<br>ADRIAN ROWAN</h1>
+                <div class="hero-labels">Researcher &bull; Educator &bull; Interdisciplinary Scholar</div>
+                <div class="hero-statement" id="hero-statement-target">"I study questions that refuse simple answers."</div>
+                <div style="display: flex; align-items: center;">
+                    <a href="#research" class="btn-atlas-primary">ENTER THE ATLAS &rarr;</a>
+                    <a href="#publications" class="btn-atlas-secondary">EXPLORE ARCHIVE</a>
+                </div>
+            </div>
+            <div class="hero-map-viewport">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+        </section>
+
+        <div class="atlas-container">
+            <div class="atlas-data-strip" id="hero-data-strip"></div>
+        </div>
+
+        <section id="scholar" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">01</span>
+                    <div>
+                        <h2 class="section-title">THE SCHOLAR</h2>
+                        <div class="section-subtitle">Intellectual Statement &amp; Orientation</div>
+                    </div>
+                </div>
+                <div id="scholar-bio-target" style="max-width: 900px;"></div>
+            </div>
+        </section>
+
+        <section id="research" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">02</span>
+                    <div>
+                        <h2 class="section-title">RESEARCH VERTICALS</h2>
+                        <div class="section-subtitle">Active Inquiry Nodes</div>
+                    </div>
+                </div>
+                <div id="research-nodes-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;"></div>
+            </div>
+        </section>
+
+        <section id="teaching" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">03</span>
+                    <div>
+                        <h2 class="section-title">CURRICULUM EXPLORER</h2>
+                        <div class="section-subtitle">Pedagogical Frameworks</div>
+                    </div>
+                </div>
+                <div id="courses-list-target" style="border-top: 1px solid var(--line);"></div>
+            </div>
+        </section>
+
+        <section id="publications" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">04</span>
+                    <div>
+                        <h2 class="section-title">PUBLICATION INDEX</h2>
+                        <div class="section-subtitle">Monographs, Peer-Reviewed Papers &amp; Book Chapters</div>
+                    </div>
+                </div>
+                <div class="publication-index" id="publications-list-target"></div>
+            </div>
+        </section>
+
+        <section id="journey" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">05</span>
+                    <div>
+                        <h2 class="section-title">ACADEMIC PATH</h2>
+                        <div class="section-subtitle">Institutional Appointments &amp; Tenure</div>
+                    </div>
+                </div>
+                <div id="career-path-target"></div>
+            </div>
+        </section>
+
+        <section id="notes" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">06</span>
+                    <div>
+                        <h2 class="section-title">FIELD JOURNAL</h2>
+                        <div class="section-subtitle">Epistemic Reflections &amp; Observation</div>
+                    </div>
+                </div>
+                <div id="field-notes-target" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 2rem;"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="atlas-section">
+            <div class="atlas-container">
+                <div class="section-anchor">
+                    <span class="section-number">07</span>
+                    <div>
+                        <h2 class="section-title">OPEN CONVERSATION</h2>
+                        <div class="section-subtitle">Direct Dispatch &amp; Colloquium Inquiries</div>
+                    </div>
+                </div>
+                <div style="max-width: 680px;">
+                    <form id="atlas-contact-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem;">FULL NAME *</label>
+                            <input type="text" id="contact-name" required style="width: 100%; padding: 0.8rem; background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius-sm); font-family: var(--font-sans);">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem;">EMAIL ADDRESS *</label>
+                                <input type="email" id="contact-email" required style="width: 100%; padding: 0.8rem; background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius-sm); font-family: var(--font-sans);">
+                            </div>
+                            <div>
+                                <label style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem;">AFFILIATED INSTITUTION</label>
+                                <input type="text" id="contact-institution" style="width: 100%; padding: 0.8rem; background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius-sm); font-family: var(--font-sans);">
+                            </div>
+                        </div>
+                        <div>
+                            <label style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem;">SUBJECT / DISPATCH OBJECTIVE *</label>
+                            <input type="text" id="contact-subject" required style="width: 100%; padding: 0.8rem; background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius-sm); font-family: var(--font-sans);">
+                        </div>
+                        <div>
+                            <label style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem;">DISPATCH MESSAGE *</label>
+                            <textarea id="contact-message" rows="5" required style="width: 100%; padding: 0.8rem; background: var(--surface); border: 1px solid var(--line); color: var(--ink); border-radius: var(--radius-sm); font-family: var(--font-sans);"></textarea>
+                        </div>
+                        <button type="submit" class="btn-atlas-primary" style="align-self: flex-start;">DISPATCH INQUIRY &rarr;</button>
+                    </form>
+                    <div id="contact-success-notice" style="display: none; margin-top: 1.5rem; padding: 1rem; border: 1px solid var(--secondary); background: rgba(214,106,61,0.08); font-size: 0.85rem; color: var(--secondary);">
+                        MESSAGE RECEIVED // Your inquiry has been stored locally for this demo instance.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="atlas-container">
+        <div class="developer-protected-anchor protected-branding-target"></div>
+    </footer>
+
+    <script src="js/data-store.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/public-site.js"></script>
+</body>
+</html>

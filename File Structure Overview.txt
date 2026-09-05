@@ -1,0 +1,28 @@
+academic-atlas/
+│
+├── index.html                  # Public Academic Atlas & Knowledge Observatory
+├── login.html                  # Architectural Gate & Authentication Portal
+├── admin.html                  # Academic Command Center & Universal CMS Engine
+├── README.md                   # Operational & Architectural Documentation
+├── robots.txt                  # Search Engine Protocol
+├── sitemap.xml                 # Search Index Map
+│
+├── css/
+│   ├── style.css               # Core Variables, Layout, Typography, & Visual System
+│   ├── responsive.css          # Device Breakpoints (320px to 1920px) & Print
+│   ├── components.css          # Cards, Modals, Index Rows, Node Canvas, & Overlays
+│   └── admin.css               # Command Center Grid, Data Tables, & Status Tints
+│
+└── js/
+    ├── data-store.js           # Central Reactive Store (LocalStorage + IndexedDB Engine)
+    ├── auth.js                 # Session State, Session Timeout & Access Control
+    ├── cms.js                  # Universal CrudManager, TableManager, FormManager & Activity
+    ├── theme.js                # Atlas Design Engine, Live Preview, & Dark Mode
+    ├── language.js             # Internationalization & Fallback Engine (EN / BN)
+    ├── search.js               # Universal Grouped Search & Highlight Engine (Ctrl+K / /)
+    ├── animations.js           # Interactive Canvas Graph, Node Visualizer, & Metric Counters
+    ├── gallery.js              # Media Observatory Lightbox & Focus Trap System
+    ├── backup.js               # JSON Export, Strict Schema Validation, Restore & Reset Engine
+    ├── validation.js           # Input Guards, Sanitization, Character Counters & Protocol Checks
+    ├── public-site.js          # Public Page Renderer, Dynamic Hydration & Readers
+    └── admin.js                # Command Center Controllers, Inquiries, Metrics & Dynamic UI
