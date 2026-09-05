@@ -1,0 +1,191 @@
+/* Academic Command Center Styling */
+.admin-body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background: #0f1113;
+    color: #e1e4e8;
+    font-family: var(--font-sans);
+}
+
+
+.admin-body button {
+    padding: 10px;
+}
+
+
+
+.admin-sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #14171a;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.admin-brand {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.admin-nav-group {
+    padding: 1.25rem 1.5rem 0.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: #73787b;
+    text-transform: uppercase;
+}
+
+.admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1.5rem;
+    color: #a0a6ad;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+    text-decoration: none;
+}
+
+.admin-nav-item:hover, .admin-nav-item.active {
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    border-left: 2px solid var(--secondary);
+}
+
+.admin-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: #0b0d0e;
+}
+
+.admin-topbar {
+    height: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #14171a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.admin-content-area {
+    padding: 2.5rem 2rem;
+    flex-grow: 1;
+}
+
+/* Status-Based Visual Color Palette System */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.status-new {
+    background: rgba(214, 180, 91, 0.15) !important;
+    color: #ecd078 !important;
+    border: 1px solid rgba(214, 180, 91, 0.4) !important;
+}
+
+.status-read {
+    background: rgba(115, 120, 123, 0.15) !important;
+    color: #b0b4b8 !important;
+    border: 1px solid rgba(115, 120, 123, 0.3) !important;
+}
+
+.status-replied {
+    background: rgba(46, 164, 79, 0.15) !important;
+    color: #56d364 !important;
+    border: 1px solid rgba(46, 164, 79, 0.4) !important;
+}
+
+.status-archived {
+    background: rgba(84, 91, 100, 0.1) !important;
+    color: #768390 !important;
+    border: 1px solid rgba(84, 91, 100, 0.25) !important;
+}
+
+.status-spam {
+    background: rgba(218, 54, 51, 0.15) !important;
+    color: #f85149 !important;
+    border: 1px solid rgba(218, 54, 51, 0.4) !important;
+}
+
+/* Dynamic Data Tables */
+.admin-table-container {
+    background: #14171a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.admin-table th {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    color: #73787b;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.admin-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Toast Hub */
+.atlas-toast-hub {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.atlas-toast {
+    background: #1c2128;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    animation: toastIn 0.3s ease;
+}
+
+@keyframes toastIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
