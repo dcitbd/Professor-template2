@@ -1,0 +1,61 @@
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .atlas-data-strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .data-strip-cell:nth-child(2) {
+        border-right: none;
+    }
+    .pub-item {
+        grid-template-columns: 60px 100px 1fr;
+    }
+    .pub-meta-col {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .atlas-section {
+        padding: 4rem 0;
+    }
+    .atlas-data-strip {
+        grid-template-columns: 1fr;
+    }
+    .data-strip-cell {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+    .pub-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .admin-sidebar {
+        position: fixed;
+        left: -280px;
+        z-index: 9999;
+        transition: left var(--transition-base);
+    }
+    .admin-sidebar.drawer-open {
+        left: 0;
+    }
+    .admin-body {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    #atlas-loader {
+        display: none !important;
+    }
+}
